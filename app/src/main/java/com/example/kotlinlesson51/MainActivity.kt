@@ -17,18 +17,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-   
     }
 
     private fun check(text: String?) {
         if (text == "10") {
             reverse = true
         }
-        if (text == "0" && reverse) {
-            binding.btn.text = "Open activity"
-            isButtonCreated = true
-        }
+        if (text == "0" && reverse) 
     }
 
     private fun count(check: Boolean?) {
