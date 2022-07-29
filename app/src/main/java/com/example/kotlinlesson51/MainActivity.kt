@@ -11,23 +11,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var num = 0;
     private var reverse: Boolean = false
-    private var isButtonCreated: Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.number.text = num.toString()
-        binding.btn.setOnClickListener {
-            if (!isButtonCreated) {
-                count(reverse)
-                check(binding.number.text.toString())
-            } else {
-                val intent = Intent(this, SecondActivity::class.java)
-                startActivity(intent)
-            }
-        }
+   
     }
 
     private fun check(text: String?) {
